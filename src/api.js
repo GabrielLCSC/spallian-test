@@ -27,5 +27,14 @@ const extractIdFromUrl = (url) => {
     return null;
 };
 
+export const fetchPokemonDetails = async (pokemonName) => {
+    try {
+        const response = await api.get(`pokemon/${pokemonName}`);
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};
+
 
 export default api;

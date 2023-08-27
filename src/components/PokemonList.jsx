@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-query';
 import { fetchPokemonList } from '../api';
+import { Link } from 'react-router-dom';
 
 
 function PokemonList() {
@@ -24,6 +25,7 @@ function PokemonList() {
         <ul className='card-list'>
             {data
             .map((pokemon) => (
+                <Link to={`/pokemon/${pokemon.name}`}>
                 <div className="card">
                     <li key={pokemon.name}>
                 <a className='names' href="#">{pokemon.name}
@@ -32,6 +34,7 @@ function PokemonList() {
                 
                 </li>
                 </div>
+                </Link>
             ))}
         </ul>
         </div>
