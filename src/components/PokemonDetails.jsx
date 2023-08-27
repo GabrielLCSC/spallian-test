@@ -21,6 +21,7 @@ function PokemonDetails() {
 
     return (
         <div>
+            
             <h2 className='title-home'>Détails du pokémon</h2>
             <div className="card-placement">
                 

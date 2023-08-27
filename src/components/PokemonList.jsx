@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { fetchPokemonList } from '../api';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,8 @@ import './PokemonList.css';
 
 function PokemonList() {
     const { data, error, isLoading } = useQuery('pokemonList', fetchPokemonList);
+    const [searchTerm, setSearchTerm] = useState('');
+
 
     if (isLoading) {
         return <p>Loading...</p>;
@@ -22,9 +24,18 @@ function PokemonList() {
 
     return (
         <div className='PokemonList'>
+            <input
+            type="text"
+            placeholder="Rechercher ..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+        />
         <h2 className='title-home'>Liste de pokémons</h2>
         <ul className='card-list'>
             {data
+            .filter((pokemon) =>
+            pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+        )
             .map((pokemon) => (
                 <Link to={`/pokemon/${pokemon.name}`}>
                 <div className="card">
