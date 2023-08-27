@@ -7,10 +7,10 @@ const api = axios.create({
 export const fetchPokemonList = async () => {
     try {
         const response = await api.get('pokemon?limit=120');
-        const resultsWithIds = response.data.results.map(pokemon => ({
-            id: extractIdFromUrl(pokemon.url),
-            name: pokemon.name,
-            url: pokemon.url
+        const resultsWithIds = response.data.results.map(({ url, name }) => ({
+            id: extractIdFromUrl(url),
+            name,
+            url,
         }));
 
         return resultsWithIds;
@@ -22,10 +22,7 @@ export const fetchPokemonList = async () => {
 const extractIdFromUrl = (url) => {
     const idRegex = /\/(\d+)\/$/;
     const match = url.match(idRegex);
-        if (match) {
-            return match[1];
-        }
-    return null;
+    return match ? match[1] : null;
 };
 
 export const fetchPokemonDetails = async (pokemonName) => {

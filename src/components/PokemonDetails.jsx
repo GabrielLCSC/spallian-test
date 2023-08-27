@@ -5,9 +5,8 @@ import { fetchPokemonDetails } from '../api';
 import './PokemonDetails.css';
 
 function PokemonDetails({ addFavorite, favorites }) {
-
     const { pokemonName } = useParams();
-
+    
     const { data, error, isLoading } = useQuery(['pokemonDetails', pokemonName], () => fetchPokemonDetails(pokemonName));
 
     const handleLikeClick = () => {
