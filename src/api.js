@@ -12,18 +12,19 @@ export const fetchPokemonList = async () => {
             name: pokemon.name,
             url: pokemon.url
         }));
+
         return resultsWithIds;
-    } catch (error) {
-        throw error;
+            } catch (error) {
+            throw error;
     }
 };
 
 const extractIdFromUrl = (url) => {
     const idRegex = /\/(\d+)\/$/;
     const match = url.match(idRegex);
-    if (match) {
-        return match[1];
-    }
+        if (match) {
+            return match[1];
+        }
     return null;
 };
 
@@ -31,10 +32,9 @@ export const fetchPokemonDetails = async (pokemonName) => {
     try {
         const response = await api.get(`pokemon/${pokemonName}`);
         return response.data;
-    } catch (error) {
+        } catch (error) {
         throw error;
     }
 };
-
 
 export default api;

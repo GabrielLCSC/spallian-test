@@ -12,6 +12,7 @@ function PokemonLikes({ favorites, removeFavorite }) {
             </div>
         );
     }
+    
     return (
         <div>
             <Link className='menu' to={`/`}>Retour à la liste</Link>
@@ -20,11 +21,11 @@ function PokemonLikes({ favorites, removeFavorite }) {
                 {favorites.map((favorite) => (
                     <div className="cardLikes">
                         <li key={favorite.name}>
-                        <h3>{favorite.name}</h3>
-                        <img src={favorite.sprites.front_default} alt={`${favorite.name} sprite`} />
-                        <p>Types: {favorite.types.map((type) => type.type.name).join(', ')}</p>
-                        <button onClick={() => removeFavorite(favorite)}>X</button>
-                    </li>
+                            <h3>{favorite.name}</h3>
+                            <img src={favorite.sprites.front_default} alt={`${favorite.name} sprite`} />
+                            <p>Types: {favorite.types.map((type) => type.type.name).join(', ')}</p>
+                            <button onClick={() => removeFavorite(favorite)}>X</button>
+                        </li>
                     </div>
                 ))}
             </ul>

@@ -28,14 +28,12 @@ function App() {
                 </header>
                 <Routes>
                     <Route path="/" element={<PokemonList />} />
-                    <Route
-                        path="/pokemon/:pokemonName"
-                        element={<PokemonDetails addFavorite={addFavorite} favorites={favorites} />}
-                    />
-                    <Route
-                        path="/likes"
-                        element={<PokemonLikes favorites={favorites} removeFavorite={removeFavorite} />}
-                    />
+
+                    <Route path="/pokemon/:pokemonName" element={<PokemonDetails 
+                    addFavorite={addFavorite} favorites={favorites} />} />
+
+                    <Route path="/likes" element={<PokemonLikes favorites={favorites} 
+                    removeFavorite={removeFavorite} />} />
                 </Routes>
             </div>
         </Router>

@@ -5,7 +5,9 @@ import { fetchPokemonDetails } from '../api';
 import './PokemonDetails.css';
 
 function PokemonDetails({ addFavorite, favorites }) {
+
     const { pokemonName } = useParams();
+
     const { data, error, isLoading } = useQuery(['pokemonDetails', pokemonName], () => fetchPokemonDetails(pokemonName));
 
     const handleLikeClick = () => {
@@ -29,12 +31,8 @@ function PokemonDetails({ addFavorite, favorites }) {
             <Link className='fav-mobile' to={`/likes`}>Favoris</Link>
             <h2 className='title-home'>Détails du pokémon</h2>
             <div className="card-placement">
-                
                 <div className='card-details'>
                     <h2>{data.name}</h2>
-                    
-                    
-
                     <img src={data.sprites.front_default} alt={`${data.name} sprite`} />
                     <div className="details">
                         <p>Height : {data.height}</p>
@@ -42,8 +40,8 @@ function PokemonDetails({ addFavorite, favorites }) {
                         <p>HP : {hpStat.base_stat}</p>
                     </div>
                     <div className='btns'>
-                    <button className='return-btn'><Link to={`/`}>Retour</Link></button>
-                    <button className='like-btn' onClick={handleLikeClick}>Like</button>
+                        <button className='return-btn'><Link to={`/`}>Retour</Link></button>
+                        <button className='like-btn' onClick={handleLikeClick}>Like</button>
                     </div>
                 </div>
             </div>

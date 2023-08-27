@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
 
-
 .cardLikes-list{
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +20,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.174);
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-
     &:hover{
         box-shadow: 0 0 10px rgba(0,0,0,0.3);   
         border: 4px solid #ffd900;
@@ -40,7 +38,6 @@
     text-decoration: none;
     color: #000;
     transition: all 0.3s ease-in-out;
-
     &:hover{
         color: #00af6f;
         transition: all 0.3s ease-in-out;

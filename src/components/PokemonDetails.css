@@ -42,7 +42,6 @@
     &:hover{
         background-color: #00bd78;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
-        
     }
     &:active{
         background-color: #da2f00;
