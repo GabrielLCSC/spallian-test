@@ -9,8 +9,9 @@ function PokemonDetails({ addFavorite, favorites }) {
     const { data, error, isLoading } = useQuery(['pokemonDetails', pokemonName], () => fetchPokemonDetails(pokemonName));
 
     const handleLikeClick = () => {
+        if (!favorites.some(favorite => favorite.id === data.id)) {
             addFavorite(data);
-        
+        }
     };
 
     if (isLoading) {

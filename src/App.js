@@ -34,7 +34,7 @@ function App() {
                     />
                     <Route
                         path="/likes"
-                        element={<PokemonLikes favorites={favorites} />}
+                        element={<PokemonLikes favorites={favorites} removeFavorite={removeFavorite} />}
                     />
                 </Routes>
             </div>
