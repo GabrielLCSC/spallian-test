@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { fetchPokemonList } from '../api';
 import { Link } from 'react-router-dom';
+import './PokemonList.css';
 
 
 function PokemonList() {

@@ -7,3 +7,33 @@
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 10px;
 }
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00dc8b;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.337);
+    z-index: 999;
+    margin-bottom: 40px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav img{
+    width: 60px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+h1{
+    font-size: 3rem;
+    color: #fff;
+}

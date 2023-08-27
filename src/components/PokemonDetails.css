@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+
+.card-placement{
+    display: flex;
+    justify-content: center;
+}
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    border: 5px solid #cfcfcf;
+    border-radius: 9px;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.219);
+    width: 400px;
+    height: 400px;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        border: 5px solid #a5e3c8;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.card-details img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-details h2{
+    font-size: 2.5rem;
+}
+
+.card-details button{
+    padding: 10px 20px;
+    background-color: #00dc8b;
+    border: none;
+    border-radius: 9px;
+    transition: 999999s ease-in-out;
+    &:hover{
+        background-color: #00bd78;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+        
+    }
+    &:active{
+        background-color: #da2f00;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+        transition: 0.0s ease-in-out;
+    }
+}
+
+.card-details button a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.like-btn{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.details{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.details p{
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

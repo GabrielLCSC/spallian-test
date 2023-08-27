@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { fetchPokemonDetails } from '../api';
+import './PokemonDetails.css';
 
 function PokemonDetails() {
     const { pokemonName } = useParams();
