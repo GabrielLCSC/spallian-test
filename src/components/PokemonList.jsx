@@ -29,6 +29,7 @@ function PokemonList() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <Link className='fav-mobile' to={`/likes`}>Favoris</Link>
         <h2 className='title-home'>Liste de pokémons</h2>
         <ul className='card-list'>
             {data

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700&display=swap');
+
+
+.cardLikes-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.cardLikes{
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #d0d0d0;
+    width: 220px;
+    height: 220px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.174);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);   
+        border: 4px solid #ffd900;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.cardLikes li{
+    margin: 10px;
+    text-align: center;
+    list-style: none;
+}   
+
+.cardLikes li h3{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        color: #00af6f;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.cardLikes p{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.cardLikes button{
+    padding: 2px 6px;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ff0000;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background-color: #ff6e13;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.menu{
+    display: inline-flex;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.8rem;
+    margin:0px 3%;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: overline;
+    }  
+}
+
+.fav-title{
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 50px 0px;
+}
+
+.empty{
+    font-size: 1.8rem;
+    text-align: center;
+}

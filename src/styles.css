@@ -37,3 +37,35 @@ h1{
     font-size: 3rem;
     color: #fff;
 }
+
+.fav{
+    display: inline-flex;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin:0px 10px;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: overline;
+    }
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
+.fav-mobile{
+    display: none;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.8rem;
+    margin:0px 3%;
+    text-decoration: underline;
+    &:hover{
+        text-decoration: overline;
+    }  
+    @media screen and (max-width: 500px) {
+        display: inline-flex;
+    }
+}

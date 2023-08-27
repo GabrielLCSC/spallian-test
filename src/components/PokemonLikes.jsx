@@ -1,10 +1,12 @@
 import React from 'react';
-
+import './PokemonLikes.css';
+import { Link } from 'react-router-dom';
 
 function PokemonLikes({ favorites, removeFavorite }) {
     if (favorites.length === 0) {
         return (
             <div>
+                <Link className='menu' to={`/`}>Retour à la liste</Link>
                 <h2 className='fav-title'>Vos coups de cœur</h2>
                 <p className='empty'>Vous n'avez encore aucun pokémon favori !</p>
             </div>
@@ -12,6 +14,7 @@ function PokemonLikes({ favorites, removeFavorite }) {
     }
     return (
         <div>
+            <Link className='menu' to={`/`}>Retour à la liste</Link>
             <h2 className='fav-title'>Vos coups de cœur</h2>
             <ul className='cardLikes-list'>
                 {favorites.map((favorite) => (

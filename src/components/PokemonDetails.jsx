@@ -26,6 +26,7 @@ function PokemonDetails({ addFavorite, favorites }) {
 
     return (
         <div>
+            <Link className='fav-mobile' to={`/likes`}>Favoris</Link>
             <h2 className='title-home'>Détails du pokémon</h2>
             <div className="card-placement">
                 
