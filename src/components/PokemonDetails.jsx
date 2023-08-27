@@ -4,10 +4,14 @@ import { useQuery } from 'react-query';
 import { fetchPokemonDetails } from '../api';
 import './PokemonDetails.css';
 
-function PokemonDetails() {
+function PokemonDetails({ addFavorite, favorites }) {
     const { pokemonName } = useParams();
     const { data, error, isLoading } = useQuery(['pokemonDetails', pokemonName], () => fetchPokemonDetails(pokemonName));
 
+    const handleLikeClick = () => {
+            addFavorite(data);
+        
+    };
 
     if (isLoading) {
         return <p>Loading...</p>;
@@ -21,7 +25,6 @@ function PokemonDetails() {
 
     return (
         <div>
-            
             <h2 className='title-home'>Détails du pokémon</h2>
             <div className="card-placement">
                 
@@ -38,6 +41,7 @@ function PokemonDetails() {
                     </div>
                     <div className='btns'>
                     <button className='return-btn'><Link to={`/`}>Retour</Link></button>
+                    <button className='like-btn' onClick={handleLikeClick}>Like</button>
                     </div>
                 </div>
             </div>
