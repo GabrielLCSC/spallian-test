@@ -1,11 +1,14 @@
-const App = () => {
-  return (
-    <div className="container">
-      <p>
-        Write your code here.
-      </p>
-    </div>
-  );
+import PokemonList from './components/PokemonList';
+import './styles.css'
+
+function App() {
+
+    return (
+
+            <div className="App">
+                < PokemonList />
+            </div>
+    );
 }
 
 export default App;
